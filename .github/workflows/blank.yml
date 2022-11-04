@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - uses: avakar/create-deployment@v1
+        with:
+          auto_merge: false
+          environment: Dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
